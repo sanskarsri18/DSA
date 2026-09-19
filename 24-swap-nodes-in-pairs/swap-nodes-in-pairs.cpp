@@ -23,7 +23,7 @@ public:
     }
 
     ListNode* swapPairs(ListNode* head) {
-        if(head == NULL){
+        if(head == NULL || head -> next == NULL){
             return head;
         }
         ListNode* left = head;
@@ -56,9 +56,7 @@ public:
                 if(prevLeft){
                     prevLeft-> next = left;
                 }
-                if(res == NULL){
-                    res = left;
-                }
+                
                 break;
             }
         }
