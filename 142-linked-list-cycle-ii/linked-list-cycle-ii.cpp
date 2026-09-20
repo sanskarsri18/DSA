@@ -22,13 +22,13 @@ public:
                 break;
             }
         }
-        if(fast && fast -> next == NULL){
+        if(fast == NULL || fast -> next == NULL){
             return NULL;
         }
         slow = head;
-        while(slow != fast){
+        while(slow && fast && slow != fast){
             slow = slow -> next;
-            if(fast)
+            
             fast = fast -> next;
         }
         return slow;
