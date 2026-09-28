@@ -7,15 +7,14 @@ public:
         for(int i = 1; i < n; i++){
             if(count == 0){
                 element = nums[i];
+                count++;
             }
-            if(nums[i] == element){
+            else if(nums[i] == element){
                 count++;
             }
             else{
                 count--;
             }
-            
-            
         }
         return element;
     }
